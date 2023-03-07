@@ -1,0 +1,13 @@
+version: '3'
+services:
+   jenkins:
+        container_name: jenkins-course
+        image: 1662a59c2c43
+        ports:
+         - "8080:8080"
+        volumes:
+         - "$PWD/jenkins_home:/var/jenkins_home"
+        networks:
+         - net
+networks:
+ net:
