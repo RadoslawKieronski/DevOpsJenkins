@@ -8,8 +8,8 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
  'MySQL [testdb]> INSERT INTO <table_name> VALUES ("rado", "kier", 32);', 
 4. 'exit'
 
-5. 'mysqldump -u root -h db_host -p testdb > /tmp/db.sql' - save database in /tmp/db.sql file
-    example: '[root@50df54faf8c1 /]# mysqldump -u root -p testdb > /tmp/db.sql'
+5. 'mysqldump -u root -h db_host -p testdb > /tmp/db.sql' - save database in /tmp/db.sql.
+    Example: '[root@50df54faf8c1 /]# mysqldump -u root -p testdb > /tmp/db.sql'
 
 6. before doing backup to s3, need to export aws user credentials on the 'remote-host' container:
    'export AWS_ACCESS_KEY_ID=XXXX'
