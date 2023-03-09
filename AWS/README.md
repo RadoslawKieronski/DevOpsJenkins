@@ -1,6 +1,6 @@
 Project is created in specification:
-remote-host is going to connect to db container and extract mysql backup from remote-host and finally upload database to AWS S3 bucket.
-Integration of local sql, remote-host with AWS s3 bucket is done with user 'rado' and his secret key.
+remote-host container is going to connect to db container and extract mysql backup from remote-host and finally make database backup to AWS S3 bucket.
+Connection from 'remote-host' container with AWS S3 bucket is done with user 'rado' and his secret key.
 
 'docker exec -it remote-host bash' - login to remote-host container
 
