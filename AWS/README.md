@@ -18,4 +18,8 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
 7. after export credentials type on 'remote-host':
    'aws s3 cp /tmp/db.sql s3://jenkins-mysql-backup-course2/db.sql'
 
-verify if new objects are added to AWS S3 bucket..
+verify if new objects are added to AWS S3 bucket.
+
+prerequisite:
+1. S3 bucket created.
+2. User has created with permissions to S3 bucket.
