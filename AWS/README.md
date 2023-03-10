@@ -20,6 +20,7 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
    'aws s3 cp /tmp/db.sql s3://jenkins-mysql-backup-course2/db.sql'
    
     5.6.7. YOU CAN OMMIT BY USING:'script.sh WITH ADDED 5 PARAMETERS ON THE 'remote-host'. MORE DETAILS IN 'script.sh'
+    Also remember to edit docker file for the 'remote-host' - 'RUN chmod 700 /tmp' to be able to execute te script.
 
 verify if new objects are added to AWS S3 bucket.
 
