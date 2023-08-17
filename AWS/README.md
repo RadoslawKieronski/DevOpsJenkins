@@ -4,8 +4,12 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
 
 1. 'docker exec -it remote-host bash' - login to remote-host container
 2. 'mysql -u root -h db_host -p' - login to mysql database
-3. create sample objects:
- 'MySQL [testdb]> INSERT INTO <table_name> VALUES ("rado", "kier", 32);', 
+3. create sample objects in the database:
+ 3.1 'create database testdb;'
+ 3.2 'use testdb'
+ 3.3 'create table info (name varchar(2), lastname varchar(20), age int(2));'
+ 3.4 'insert into info values ('Rado', 'Kiero', 30);'
+ 3.5 'select * from info'
 4. 'exit'
 
 5. 'mysqldump -u root -h db_host -p testdb > /tmp/db.sql' - save database in /tmp/db.sql.
