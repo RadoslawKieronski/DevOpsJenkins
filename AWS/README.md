@@ -31,3 +31,21 @@ verify if new objects are added to AWS S3 bucket.
 Prerequisite:
 1. S3 bucket created.
 2. User has created with permissions to S3 bucket.
+
+Using Jenkins to hide the sensitive data (credentials):
+1. Install required credential plugins
+2. Go to 'credentials' -> 'GLobal Credentials' -> 'add credentials' in Jenkins
+3. For MySQL secret: Kind : 'secret text', Secret: '1234' ID: 'DB_PASSWORD' (ID is doesnt matter)
+4. For AWS secret: Kind : 'secret text', Secret: '<Amazon_Secret_Key>' ID: 'AWS_SECRET' (ID is doesnt matter)
+5. Create w new job
+   5.1 this script is parametherized (select the box)
+   5.2 Add 3 string parameters:
+    Name: 'DB_HOST' Default Value: 'db_host'
+    Name: 'DB_NAME' Default Value: 'testdb'
+    Name: 'BUCKET_NAME' Default Value: 'jenkins-mysql-backup-course2'
+   5.3.  Use secret test(s) or file(s) (select the box)
+   5.4 Add 'secret text'
+   5.5 Add Variable: 'DB_PASSWORD' Credentials: 'DB_PASSWORD'
+       Add Variable: 'AWS_SECRET' Credentials: 'AWS_SECRET'
+   5.6 Build steps: ''Execute shell script on remote host using ssh'
+    Command: /tmp/script.sh/script.sh $DB_HOST $DB_PASSWORD $DB_NAME $AWS_SECRET $BUCKET_NAME 
