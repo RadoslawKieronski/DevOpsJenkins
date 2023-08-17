@@ -39,8 +39,6 @@ Using Jenkins to hide the sensitive data (credentials):
 3. For MySQL secret: Kind : 'secret text', Secret: '1234' ID: 'DB_PASSWORD' (ID is doesnt matter)
 4. For AWS secret: Kind : 'secret text', Secret: '<Amazon_Secret_Key>' ID: 'AWS_SECRET' (ID is doesnt matter)
 
-   ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/c17642a6-5eed-4fe0-9cc4-8e40a13dd039)
-
 5. Create w new job
    5.1 this script is parametherized (select the box)
    5.2 Add 3 string parameters:
@@ -48,17 +46,11 @@ Using Jenkins to hide the sensitive data (credentials):
     Name: 'DB_NAME' Default Value: 'testdb'
     Name: 'BUCKET_NAME' Default Value: 'jenkins-mysql-backup-course2'
 
-   ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/1fbfc3b6-da45-4729-8690-3ac833c05dc1)
-
    5.3.  Use secret test(s) or file(s) (select the box)
    5.4 Add 'secret text'
    5.5 Add Variable: 'DB_PASSWORD' Credentials: 'DB_PASSWORD'
        Add Variable: 'AWS_SECRET' Credentials: 'AWS_SECRET'
 
-   ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/8e55b60b-e3af-4efc-8a22-c7920a026361)
-
    5.6 Build steps: ''Execute shell script on remote host using ssh'
     Command: /tmp/script.sh/script.sh $DB_HOST $DB_PASSWORD $DB_NAME $AWS_SECRET $BUCKET_NAME
-
-   ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/59deb49d-4a15-44d4-9f5f-03437e32fae5)
 
