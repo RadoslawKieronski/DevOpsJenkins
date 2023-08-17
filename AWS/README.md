@@ -1,6 +1,10 @@
 Project is created in specification:
-remote-host container is going to connect to db container and extract mysql backup from remote-host (by using db container) and finally make database backup to AWS S3 bucket.
+1st part: remote-host container is going to connect to db container and extract mysql backup from remote-host (by using db container) and finally make database backup to AWS S3 bucket.(1-7)
+2nd part: jenkins job that takes backup from MySql database and place it to AWS S3 Bucket.
+
 Connection from 'remote-host' container with AWS S3 bucket is done with user 'rado' and his secret key.
+
+1st PART:
 
 1. 'docker exec -it remote-host bash' - login to remote-host container
 2. 'mysql -u root -h db_host -p' - login to mysql database
@@ -32,6 +36,7 @@ Prerequisite:
 1. S3 bucket created.
 2. User has created with permissions to S3 bucket.
 
+2nd PART:
 Using Jenkins to hide the sensitive data (credentials):
 1. Install required credential plugins
 2. Go to 'credentials' -> 'GLobal Credentials' -> 'add credentials' in Jenkins
