@@ -1,2 +1,2 @@
 # DevOpsJenkins
-The project is created do integrate Jenkins with various Devops tools.
+The project is created to integrate Jenkins with various Devops tools.
