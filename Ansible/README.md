@@ -1,14 +1,16 @@
-Project is designed in the specification: jenkins connects throw ssh to remote-host. On the Jenkins container ansible is installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container.
+# Ansible playbook running on a remote-host container
 
-Setting Jenkins UI with Ansible:
+Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container.
+
+## Setting Jenkins UI with Ansible:
 1. Install ansible plugin
-'Manage Jenkins' -> 'plugins'
+   'Manage Jenkins' -> 'plugins'
 2. Create w test job
-  2.1in section 'Build' -> 'Build step' -> 'invoke ansible playbook'
+   - in section 'Build' -> 'Build step' -> 'invoke ansible playbook'
      Fullfill path for inventory and playbook file on a jenkins container:
      Playbook path: '/ver/jenkin_home/ansible/play.yml
      File or host list: '/var/jenkins_home/ansible/hosts'
-   2.2 Run the job
+   - Run the job
 
 ADD Parameters to the Ansible and Jenkins:
 mofidy the file 'play.xml' like below:
@@ -18,9 +20,9 @@ mofidy the file 'play.xml' like below:
    - debug:
        msg: "{{ MSG }}"
 -----
-Changes in the job (jenkins UI):
+### Changes in the job (jenkins UI):
 1. select the box 'this project is parameterized
 2. Select 'string parameter': NAME: 'ANSIBLE_MSG', Default Value: 'Hello World'
 3. In the bild section -> 'Advanced' -> 'Add extra variable': Key: 'MSG', Value: '$ANSIBLE_MSG'
 
-To sum up: ansible is taking the value from parameter and passing it to the playbook using an extra variable
+**conclusion: ansible is taking the value from parameter and passing it to the playbook using an extra variable.**
