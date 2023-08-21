@@ -1,3 +1,5 @@
+#SSH connection from Jenkins container to remote-host container#
+
 There are created 2 containers: jenkins, remote-host.
 
 There has been created project where jenkins server is able to establish ssh connection to remote-host using remote_user.
