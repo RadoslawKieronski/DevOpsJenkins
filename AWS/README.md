@@ -11,7 +11,7 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
 
 ## 1st PART:
 
-1. _'docker exec -it remote-host bash'_ - -login to remote-host container
+1. _'docker exec -it remote-host bash'_ - login to remote-host container
 2. _'mysql -u root -h db_host -p'_ - login to mysql database
 3. create sample objects in the database:
    - _'create database testdb;'_
@@ -34,13 +34,15 @@ Connection from 'remote-host' container with AWS S3 bucket is done with user 'ra
 **verify if new objects are added to AWS S3 bucket.**
 
 ## 2nd PART:
-Using Jenkins to hide the sensitive data (credentials):
-1. Install required credential plugins
-2. Go to 'credentials' -> 'GLobal Credentials' -> 'add credentials' in Jenkins
-3. For MySQL secret: Kind : 'secret text', Secret: '1234' ID: 'DB_PASSWORD' (ID is doesnt matter)
-4. For AWS secret: Kind : 'secret text', Secret: '<Amazon_Secret_Key>' ID: 'AWS_SECRET' (ID is doesnt matter)
+Jenkins job that connects throw SSH to remote_host and takes backup from MySql database and place it to AWS S3 Bucket.
 
-5. Create w new job
+1. Install required credential plugins
+2. Using Jenkins to hide the sensitive data (credentials):
+   - Go to 'credentials' -> 'GLobal Credentials' -> 'add credentials' in Jenkins
+   - For MySQL secret: Kind : 'secret text', Secret: '1234' ID: 'DB_PASSWORD' (ID is doesn't matter)
+   - For AWS secret: Kind : 'secret text', Secret: '<Amazon_Secret_Key>' ID: 'AWS_SECRET' (ID is doesn't matter)
+
+3. Create w new job
    - this script is parametherized (select the box)
    - Add 3 string parameters:
     Name: 'DB_HOST' Default Value: 'db_host'
