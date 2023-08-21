@@ -7,19 +7,18 @@ Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is i
    'Manage Jenkins' -> 'plugins'
 2. Create w test job
    - in section 'Build' -> 'Build step' -> 'invoke ansible playbook'
-     Fullfill path for inventory and playbook file on a jenkins container:
+     Fulfill path for _inventory_ and _playbook file_ on a jenkins container:
      Playbook path: '/ver/jenkin_home/ansible/play.yml
      File or host list: '/var/jenkins_home/ansible/hosts'
    - Run the job
 
 ADD Parameters to the Ansible and Jenkins:
 mofidy the file 'play.xml' like below:
------
-- hosts: test1
-  tasks:
-   - debug:
-       msg: "{{ MSG }}"
------
+```
+ - hosts: test1
+   tasks:
+    - debug: msg: "{{ MSG }}"
+```
 ### Changes in the job (jenkins UI):
 1. select the box 'this project is parameterized
 2. Select 'string parameter': NAME: 'ANSIBLE_MSG', Default Value: 'Hello World'
