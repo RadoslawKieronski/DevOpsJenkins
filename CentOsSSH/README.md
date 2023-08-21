@@ -1,4 +1,4 @@
-#SSH connection from Jenkins container to remote-host container
+# SSH connection from Jenkins container to remote-host container
 
 There are created 2 containers: jenkins, remote-host.
 
