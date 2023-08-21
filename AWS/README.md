@@ -1,8 +1,9 @@
 # Extracting MYSQL database backup and placing it to the AWS S3 Bucket
 
 
-[^1]: 1st part: remote-host container is going to connect to db container and extract mysql backup from remote-host (by using db container) and finally make database backup to AWS S3 bucket.(1-7)
-[^2]: 2nd part: jenkins job that connects throw ssh to remote_host and takes backup from MySql database and place it to AWS S3 Bucket.
+1st part: remote-host container is going to connect to db container and extract mysql backup from remote-host (by using db container) and finally make database backup to AWS S3 bucket.(1-7)
+
+2nd part: jenkins job that connects throw ssh to remote_host and takes backup from MySql database and place it to AWS S3 Bucket.
 
 ## Prerequisite:
 1. S3 bucket created.
