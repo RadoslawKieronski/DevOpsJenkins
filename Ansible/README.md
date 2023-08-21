@@ -12,7 +12,7 @@ Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is i
      - File or host list: '/var/jenkins_home/ansible/hosts'
    - Run the job
 
-## Parametherize the job
+## Parameterize the job
 ADD Parameters to the Ansible and Jenkins:
 mofidy the file 'play.xml' like below:
 ```
