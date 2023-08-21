@@ -1,1 +1,1 @@
-Project is designed in the specification: jenkins conntects throw ssh to remote-host. On the Jenkins container ansible in installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container.
+Project is designed in the specification: jenkins conntects throw ssh to remote-host. On the Jenkins container ansible is installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container.
