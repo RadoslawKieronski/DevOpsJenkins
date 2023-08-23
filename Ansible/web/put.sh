@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# script is responsible for inserting values to people database.
+# you have to copy this script with 'people.txt' file to db container and run it there
+
 counter=0
 
 while [ $counter -lt 50 ]; do
