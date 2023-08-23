@@ -14,7 +14,7 @@ Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is i
 
 ## Parameterize the job
 ADD Parameters to the Ansible and Jenkins:
-mofidy the file 'play.xml' like below:
+mofidy the file 'play.yml' like below:
 ```
  - hosts: test1
    tasks:
