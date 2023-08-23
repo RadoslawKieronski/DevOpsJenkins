@@ -35,7 +35,7 @@
   $sql = "SELECT * FROM register;
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
-   // output data of each row
+   // output data of  each row 
    while($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["id"]. "</td><td>" . $row["name"] . "</td><td>"
 . $row["lastname"]. "</td><td>" . $row["age"]. "</td></tr>";
