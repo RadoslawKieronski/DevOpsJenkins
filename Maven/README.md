@@ -27,3 +27,7 @@ __Maven is looks for to the code that GIT previously downloaded and uses 'pom.xm
 goal 'test' maven scans your project and do the test (test needs to be written by someone)
 
 In this case is written 'https://github.com/jenkins-docs/simple-java-maven-app/blob/master/src/test/java/com/mycompany/app/AppTest.java'
+
+# Deploying Jar
+![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/dd760001-5872-453a-94ac-76ff269589e0)
+
