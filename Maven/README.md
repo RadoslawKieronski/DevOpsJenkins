@@ -2,6 +2,7 @@ CI/CD - Used sample java-maven app from the Github:
 _https://github.com/jenkins-docs/simple-java-maven-app/tree/master_
 
 # Clone Repo and build JAR file
+
 1. Install plugin 'maven integration'
 2. Install plugin 'git'
 3. Setup Maven in jenkins(Manage Jenkins -> Tools):
@@ -29,8 +30,9 @@ goal 'test' maven scans your project and do the test (test needs to be written b
 In this case is written 'https://github.com/jenkins-docs/simple-java-maven-app/blob/master/src/test/java/com/mycompany/app/AppTest.java'
 
 # Deploying Jar
+
 ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/dd760001-5872-453a-94ac-76ff269589e0)
 
 # Archive the last successful artifact
-Using post-build Actions
+
 ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/1bc877a8-7c9a-477b-9ffc-90f875dd5003)
