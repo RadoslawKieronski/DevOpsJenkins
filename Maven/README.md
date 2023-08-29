@@ -17,3 +17,10 @@ Output from the job(path for the JAR file):
 _[INFO] Building jar: /var/jenkins_home/workspace/maven-job/target/my-app-1.0-SNAPSHOT.jar_
 
 __Maven is looks for to the code that GIT previously downloaded and uses 'pom.xml' file to build JAR package.__
+
+**Implementing unit testing**
+<img width="326" alt="image" src="https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/dd8dd3b5-56b0-4a83-8507-a72fe3505720">
+
+
+goal 'test' maven test scan your project and do the test (test needs to be written by someone)
+In this case is written 'https://github.com/jenkins-docs/simple-java-maven-app/blob/master/src/test/java/com/mycompany/app/AppTest.java'
