@@ -10,5 +10,7 @@ _Goal for build from 'https://github.com/jenkins-docs/simple-java-maven-app/blob
 ![image](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/b0464128-1755-4bbe-9835-6f7073dbdb38)
 
 Output from the job(path for the JAR file):
+
 _[INFO] Building jar: /var/jenkins_home/workspace/maven-job/target/my-app-1.0-SNAPSHOT.jar_
-Maven is looking to the code that GIT previously downloaded and using 'pom.xml' file build JAR package.
+
+__Maven is looking to the code that GIT previously downloaded and using 'pom.xml' file to build JAR package.__
