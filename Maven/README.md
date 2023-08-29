@@ -1,3 +1,6 @@
+Used sample java-maven app from the Github:
+_https://github.com/jenkins-docs/simple-java-maven-app/tree/master_
+
 1. Install plugin 'maven integration'
 2. Install plugin 'git'
 3. Setup Maven in jenkins(Manage Jenkins -> Tools):
