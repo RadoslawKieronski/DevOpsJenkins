@@ -16,4 +16,4 @@ Output from the job(path for the JAR file):
 
 _[INFO] Building jar: /var/jenkins_home/workspace/maven-job/target/my-app-1.0-SNAPSHOT.jar_
 
-__Maven is looking to the code that GIT previously downloaded and using 'pom.xml' file to build JAR package.__
+__Maven is looks for to the code that GIT previously downloaded and uses 'pom.xml' file to build JAR package.__
