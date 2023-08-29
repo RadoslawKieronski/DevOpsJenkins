@@ -31,3 +31,6 @@ In this case is written 'https://github.com/jenkins-docs/simple-java-maven-app/b
 # Deploying Jar
 ![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/dd760001-5872-453a-94ac-76ff269589e0)
 
+# Archive the last successful artifact
+Using post-build Actions
+![obraz](https://github.com/RadoslawKieronski/DevOpsJenkins/assets/64900997/1bc877a8-7c9a-477b-9ffc-90f875dd5003)
