@@ -1,4 +1,4 @@
-Used sample java-maven app from the Github:
+CI/CD - Used sample java-maven app from the Github:
 _https://github.com/jenkins-docs/simple-java-maven-app/tree/master_
 
 # Clone Repo and build JAR file
