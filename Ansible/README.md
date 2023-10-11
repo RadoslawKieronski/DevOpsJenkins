@@ -1,6 +1,6 @@
 # Ansible playbook running on a remote-host container
 
-Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container.
+Jenkins connects throw ssh to remote-host. On the Jenkins container ansible is installed. On the Jenkins container playbook file and inventory file are created and those file are reponsible for running ansible playbook on a remote-host container by ssh connection.
 REMEMBER TO ADD remote-host SSH KEY (remote-key) from centos7 DIR TO jenkins-ansible.
 ## Setting Jenkins UI with Ansible:
 1. Install ansible plugin
