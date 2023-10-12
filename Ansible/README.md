@@ -8,7 +8,7 @@ REMEMBER TO ADD remote-host SSH KEY (remote-key) from centos7 DIR TO jenkins-ans
 2. Create w test job
    - in section 'Build' -> 'Build step' -> 'invoke ansible playbook'
      Fulfill path for _inventory_ and _playbook file_ on a jenkins container:
-     - Playbook path: '/ver/jenkin_home/ansible/play.yml
+     - Playbook path: '/var/jenkin_home/ansible/play.yml
      - File or host list: '/var/jenkins_home/ansible/hosts'
    - Run the job
 
